@@ -1,0 +1,368 @@
+        @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+        * {
+            font-family: 'Manrope', sans-serif;
+            box-sizing: border-box;
+        }
+        
+        html,
+        body {
+            font-family: 'Manrope', sans-serif;
+            background-image: linear-gradient(to right top, #8e27ff, #7b21fa, #651bf5, #4b16f0, #2512eb);
+            padding-bottom: 50px;
+        }
+        
+        .loading-bg {
+            background: white;
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            width: 100vw;
+            z-index: 3;
+            transform: translate(0, 100%);
+        }
+        
+        header {
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: row;
+            height: 90px;
+            padding: 0 40px;
+        }
+        
+        header .logo {
+            font-weight: 700;
+        }
+        
+        header .logo a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        header .menu ul {
+            display: flex;
+        }
+        
+        header .menu ul li {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        header .menu li a {
+            font-size: .8rem;
+            color: white;
+            text-decoration: none;
+            padding-right: 20px;
+        }
+        
+        .menu-btn {
+            background: rgba(255, 255, 255, .3);
+            padding: 15px 15px;
+            border-radius: 20px;
+            width: 160px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* height: 40px; */
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        #home {
+            height: calc(100vh - 90px);
+            overflow: hidden;
+        }
+        
+        #home .content-area {
+            height: calc(100vh - 90px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        #home .info-section {
+            width: 50%;
+        }
+        
+        #tug {
+            font-size: 5rem;
+            font-weight: 900;
+            color: white;
+            margin-bottom: 2rem;
+        }
+        
+        #motto {
+            font-size: 1.1rem;
+            font-weight: 300;
+            color: white;
+            margin-bottom: 2rem;
+            letter-spacing: 2px;
+        }
+        
+        #home .info-section .call-actions {
+            position: absolute;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        
+        .action-btn,
+        .action-ghost-btn {
+            padding: 20px 20px;
+            border-radius: 30px;
+            width: 160px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            color: white;
+            font-weight: 500;
+            font-size: .9rem;
+        }
+        
+        .action-btn {
+            background: white;
+            color: #8e27ff;
+            margin-right: 20px;
+        }
+        
+        .action-ghost-btn {
+            background: transparent;
+            border: 2px solid white;
+            color: white;
+        }
+        
+        #home .photos {
+            width: 50%;
+            position: relative;
+            height: 400px;
+        }
+        
+        #home .photos .girl {
+            position: absolute;
+            width: 400px;
+            height: 600px;
+            z-index: 1;
+            transform: translate3d(0, -200px, 0);
+            object-fit: cover;
+            object-position: top;
+            transition: filter .4s ease-in-out;
+        }
+        
+        #home .photos .girl:hover {
+            filter: blur(5px);
+            cursor: pointer;
+        }
+        
+        #home .photos .boy {
+            position: absolute;
+            width: 400px;
+            height: 600px;
+            z-index: 2;
+            transform: translate3d(300px, 100px, 0);
+            object-fit: cover;
+            object-position: top;
+            transition: filter .5s ease-in-out;
+        }
+        
+        #home .photos .boy:hover {
+            filter: blur(5px);
+            cursor: pointer;
+        }
+        
+        .shape1-home {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            border: 2px dashed white;
+            transform: translate3d(100px, 0, 0);
+        }
+        
+        .shape2 {
+            opacity: .3;
+            border: 2px dashed white;
+            background-color: white;
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            transform: translate3d(600px, -300px, 0);
+            border: 1px dashed white;
+            clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+        }
+        
+        .shape3 {
+            opacity: .6;
+            border: 2px dashed white;
+            background-color: white;
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            transform: translate3d(0px, 300px, 0);
+            border: 1px dashed white;
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+        }
+        
+        #about .content-area {
+            height: calc(100vh - 90px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        #about .info-section p {
+            font-size: 3rem;
+            font-weight: 900;
+            color: white;
+            width: 50%;
+            height: 50%;
+            margin-bottom: 10px;
+        }
+        
+        #mission {
+            font-size: 1.1rem;
+            font-weight: 300;
+            width: 50%;
+            color: white;
+            margin-bottom: 2rem;
+            letter-spacing: 2px;
+        }
+        
+        #about .photos {
+            position: relative;
+            width: 50%;
+            top: 150px;
+        }
+        
+        #about .photos .dad {
+            position: absolute;
+            width: 400px;
+            height: 450px;
+            z-index: 1;
+            transform: translate3d(750px, -750px, 0);
+            object-fit: cover;
+            object-position: top;
+            transition: filter .4s ease-in-out;
+        }
+        
+        #about .photos .dad:hover {
+            filter: blur(5px);
+            cursor: pointer;
+        }
+        
+        #about .photos .fam {
+            position: absolute;
+            width: 400px;
+            height: 500px;
+            z-index: 2;
+            transform: translate3d(1100px, -500px, 0);
+            object-fit: cover;
+            object-position: top;
+            transition: filter .4s ease-in-out;
+        }
+        
+        #about .photos .fam:hover {
+            filter: blur(5px);
+            cursor: pointer;
+        }
+        
+        .shape1-about {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            border: 2px dashed white;
+            transform: translate3d(900px, -690px, 0);
+        }
+        
+        #trapezoid {
+            position: absolute;
+            left: 1104px;
+            top: 750px;
+            border-bottom: 100px solid white;
+            border-left: 25px solid transparent;
+            border-right: 25px solid transparent;
+            height: 0;
+            width: 100px;
+            opacity: .3;
+        }
+        
+        #star {
+            position: absolute;
+            left: 1600px;
+            top: 100px;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            border-bottom: 100px solid white;
+            height: 0px;
+            width: 100px;
+            opacity: .3;
+        }
+        
+        #star:after {
+            width: 0;
+            height: 0;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            border-top: 100px solid white;
+            position: absolute;
+            content: "";
+            top: 30px;
+            left: -50px;
+        }
+        
+        #gallery .content-area {
+            min-height: calc(100vh-90px);
+        }
+        
+        #gallery .white-bg {
+            background: white;
+            padding: 20px;
+        }
+        
+        #gallery h2 {
+            font-size: 3rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        
+        #gallery ul {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        
+        #gallery li {
+            justify-self: center;
+            align-self: center;
+            position: relative;
+            height: 300px;
+            overflow: hidden;
+        }
+        
+        #gallery li .hover-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 300px;
+            background: rgba(0, 0, 0, .5);
+            transition: all .4s ease-in-out;
+        }
+        
+        #gallery li:hover .hover-bg {
+            transform: translate(0, 100%);
+            cursor: pointer
+        }
+        
+        #gallery img {
+            width: 450px;
+            height: 300px;
+            object-fit: cover;
+            object-position: center;
+        }
